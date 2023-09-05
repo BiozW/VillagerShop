@@ -1992,35 +1992,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1207811161}
-  - component: {fileID: 1207811160}
+  - component: {fileID: 1207811162}
   m_Layer: 0
-  m_Name: Purchase
+  m_Name: Emerald Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1207811160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207811159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acaee9d15a4a8e0409f866b15a605d89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  emeraldText: {fileID: 1941915512}
-  itemdata:
-    displayName: 
-    icon: {fileID: 0}
-    type: 0
-    cost: 3
-    count: 0
-  emerald: 64
 --- !u!4 &1207811161
 Transform:
   m_ObjectHideFlags: 0
@@ -2036,6 +2015,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1207811162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207811159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c1af1240e046048b22a9762b07fbd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emeraldText: {fileID: 1941915512}
+  myemerald: 64
 --- !u!1 &1317572531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,7 +2619,7 @@ MonoBehaviour:
   countText: {fileID: 2025919115}
   itemImage: {fileID: 0}
   pointerImage: {fileID: 355913009}
-  purchase: {fileID: 1207811160}
+  purchase: {fileID: 0}
 --- !u!114 &1546350101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2671,9 +2664,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1207811160}
-        m_TargetAssemblyTypeName: Minecraft.InventorySystem.PurchaseManager, Assembly-CSharp
-        m_MethodName: Purchase
+      - m_Target: {fileID: 1207811162}
+        m_TargetAssemblyTypeName: Minecraft.InventorySystem.EmeraldManager, Assembly-CSharp
+        m_MethodName: EmeraldUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2695,15 +2688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaee9d15a4a8e0409f866b15a605d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  emeraldText: {fileID: 0}
-  itemdata:
-    displayName: 
-    icon: {fileID: 0}
-    type: 0
-    cost: 0
-    count: 0
-  emerald: 0
+  emeraldManager: {fileID: 0}
+  emeraldcost: 0
 --- !u!1 &1679698520
 GameObject:
   m_ObjectHideFlags: 0

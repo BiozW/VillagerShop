@@ -8,26 +8,16 @@ namespace Minecraft.InventorySystem
 {
     public class PurchaseManager : MonoBehaviour
     {
+        public EmeraldManager emeraldManager;
+        public int emeraldcost = 0;
         
-        public int emeraldcost;
-        
-        public void PurchaseOnClick()
+        public void Purchase()
         {
-            if (myemerald >= emeraldcost)
+            if (emeraldManager.myemerald >= emeraldcost)
             {
-                myemerald = myemerald-itemdata.cost;
+                emeraldManager.myemerald -= this.emeraldcost;
+                emeraldManager.EmeraldUpdate();
             }
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-            emeraldText.text = emerald.ToString();
-            /*
-            costText.text = GetComponent<UIItem>().cost;
-            emeraldText.text = fakecost + item..cost;
-            */
         }
     }
 }

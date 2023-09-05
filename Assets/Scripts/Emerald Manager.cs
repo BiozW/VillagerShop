@@ -1,17 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class EmeraldManager : MonoBehaviour
+namespace Minecraft.InventorySystem
 {
-    // Start is called before the first frame update
-    public TMPro.TMP_Text emeraldText;
-    public myemerald;
-
-    // Update is called once per frame
-    void Update()
+        public class EmeraldManager : MonoBehaviour
     {
-        
+        // Start is called before the first frame update
+        public TMPro.TMP_Text emeraldText;
+        public int myemerald = 64;
+
+        // Update is called once per frame
+        void Update()
+        {
+            EmeraldUpdate();
+        }
+
+        public void EmeraldUpdate()
+        {
+            emeraldText.text = myemerald.ToString();
+        }
     }
-    
 }
+
+
