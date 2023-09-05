@@ -2,18 +2,19 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Minecraft.InventorySystem
 {
     public class UIInventory : MonoBehaviour
     {
         [Header("Category")]
-        [SerializeField] Image categoryIconImage;
-        [SerializeField] Text categoryText;
+        //[SerializeField] Image categoryIconImage;
+        [SerializeField] TMP_Text categoryText;
         
         [Header("Current Item")]
         [SerializeField] Image currentItemIconImage;
-        [SerializeField] Text descriptionText;
+        //[SerializeField] Text descriptionText;
 
         [Header("Item List")] 
         [SerializeField] UIItem itemUIPrefab;
@@ -27,14 +28,14 @@ namespace Minecraft.InventorySystem
 
         public void SetCategory(CategoryInfo info)
         {
-            categoryIconImage.sprite = info.icon;
+            //categoryIconImage.sprite = info.icon;
             categoryText.text = info.name;
         }
         
         public void SetCurrentItemInfo(ItemData data)
         {
-            descriptionText.text = data.description;
-            currentItemIconImage.sprite = data.icon;
+            //descriptionText.text = data.description;
+            //currentItemIconImage.sprite = data.icon;
         }
 
         public void SetItemList(UIItem_Data[] uiDatas)

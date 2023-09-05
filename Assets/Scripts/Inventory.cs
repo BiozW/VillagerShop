@@ -38,17 +38,18 @@ namespace Minecraft.InventorySystem
     public class ItemData
     {
         public string displayName;
-        public string description;
+        //public string description;
         public Sprite icon;
         public ItemType type;
+        public int cost;
         public int count;
     }
 
     public enum ItemType
     {
-        PokeBalls, 
-        Items, 
-        KeyItems, 
+        Weapon, 
+        Food, 
+        Material, 
         Others
     }
 }
