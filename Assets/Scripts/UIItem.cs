@@ -21,6 +21,10 @@ namespace Minecraft.InventorySystem
             //itemNameText.text = data.itemData.displayName;
             costText.text = "" + data.itemData.cost;
             countText.text = "" +  data.itemData.count;
+            if(data.itemData.count == 1)
+            {
+                countText.text = "";
+            }
             itemImage = data.itemData.icon;
             Image imageComponent = ItemIcon.GetComponent<Image>();
             imageComponent.sprite = data.itemData.icon;

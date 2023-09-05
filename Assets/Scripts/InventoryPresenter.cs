@@ -42,6 +42,22 @@ namespace Minecraft.InventorySystem
             {
                 NextItem();
             }
+            //
+            else if(Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                pageSize = 3;
+                RefreshUI();
+            }
+            else if(Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                pageSize = 5;
+                RefreshUI();
+            }
+            else if(Input.GetKey(KeyCode.Alpha3))
+            {
+                pageSize = 7;
+                RefreshUI();
+            }
         }
 
         void PrevCategory()
