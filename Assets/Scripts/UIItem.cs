@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 namespace Minecraft.InventorySystem
 {
@@ -35,6 +36,15 @@ namespace Minecraft.InventorySystem
             pointerImage.gameObject.SetActive(data.isSelected);
         }
 
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            
+        }
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            
+        }
+
     }
 
     //Create a DTO class that hold information of the item and also tell is the item is selected.
@@ -49,4 +59,7 @@ namespace Minecraft.InventorySystem
             this.isSelected = isSelected;
         }
     }
+    
+    
+
 }
