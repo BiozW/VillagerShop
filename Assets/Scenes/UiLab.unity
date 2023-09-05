@@ -727,6 +727,7 @@ RectTransform:
   m_Children:
   - {fileID: 1996132736}
   - {fileID: 1316851718}
+  - {fileID: 282246755}
   - {fileID: 1598589242}
   m_Father: {fileID: 1067666584}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -753,6 +754,7 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   pointerImage: {fileID: 1996132737}
   purchase: {fileID: 1598589243}
+  descriptionShow: {fileID: 282246756}
 --- !u!114 &47375458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2000,6 +2002,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236625618}
   m_CullTransparentMesh: 1
+--- !u!1 &282246754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282246755}
+  - component: {fileID: 282246756}
+  m_Layer: 0
+  m_Name: Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &282246755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282246754}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44.509544, y: -32.997627, z: -0.8569212}
+  m_LocalScale: {x: 0.1369863, y: 0.1369863, z: 0.1369863}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 47375456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282246756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282246754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1d5d64b0dac084ab065cc98ec643f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: {fileID: 1821651074}
+  description: 
 --- !u!1 &301381129
 GameObject:
   m_ObjectHideFlags: 0
@@ -5218,6 +5266,7 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: bda28b75f5b01e24495dfa0767ba37f0, type: 3}
   - name: Material
     icon: {fileID: 21300000, guid: 4b13538e9bc74eb4cbc9f04e2697433d, type: 3}
+  purchaseManager: {fileID: 0}
 --- !u!4 &1068438890
 Transform:
   m_ObjectHideFlags: 0
@@ -9616,7 +9665,7 @@ GameObject:
   - component: {fileID: 1821651075}
   - component: {fileID: 1821651074}
   m_Layer: 5
-  m_Name: Category (1)
+  m_Name: Discription Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

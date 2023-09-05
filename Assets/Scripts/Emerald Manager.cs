@@ -22,6 +22,7 @@ namespace Minecraft.InventorySystem
         {
             if (myemerald == 0)
             {
+                
             }
             else
             emeraldText.text = myemerald.ToString();

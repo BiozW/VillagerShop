@@ -17,10 +17,12 @@ namespace Minecraft.InventorySystem
         [SerializeField] Sprite itemImage;
         [SerializeField] Image pointerImage;
         public PurchaseManager purchase;
+        public DescriptionShow descriptionShow;
 
 
         public void SetData(UIItem_Data data)
         {
+            descriptionShow.description = data.itemData.description;
             purchase.emeraldcost = data.itemData.cost;
             //itemNameText.text = data.itemData.displayName;
             costText.text = "" + data.itemData.cost;
@@ -42,7 +44,7 @@ namespace Minecraft.InventorySystem
         }
         public void OnPointerExit(PointerEventData eventData)
         {
-            
+
         }
 
     }
