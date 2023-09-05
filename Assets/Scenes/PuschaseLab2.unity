@@ -1983,6 +1983,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170063712}
   m_CullTransparentMesh: 1
+--- !u!1 &1205807187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205807188}
+  - component: {fileID: 1205807189}
+  m_Layer: 5
+  m_Name: Purchase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1205807188
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205807187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1546350097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1205807189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205807187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acaee9d15a4a8e0409f866b15a605d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emeraldManager: {fileID: 1207811162}
+  emeraldcost: 0
 --- !u!1 &1207811159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,7 +2585,6 @@ GameObject:
   - component: {fileID: 1546350098}
   - component: {fileID: 1546350100}
   - component: {fileID: 1546350101}
-  - component: {fileID: 1546350102}
   m_Layer: 5
   m_Name: UI_ItemShop
   m_TagString: Untagged
@@ -2557,6 +2606,7 @@ RectTransform:
   m_Children:
   - {fileID: 355913008}
   - {fileID: 247154647}
+  - {fileID: 1205807188}
   m_Father: {fileID: 1448380210}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2619,7 +2669,7 @@ MonoBehaviour:
   countText: {fileID: 2025919115}
   itemImage: {fileID: 0}
   pointerImage: {fileID: 355913009}
-  purchase: {fileID: 0}
+  purchase: {fileID: 1205807189}
 --- !u!114 &1546350101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2664,9 +2714,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1207811162}
-        m_TargetAssemblyTypeName: Minecraft.InventorySystem.EmeraldManager, Assembly-CSharp
-        m_MethodName: EmeraldUpdate
+      - m_Target: {fileID: 1205807189}
+        m_TargetAssemblyTypeName: Minecraft.InventorySystem.PurchaseManager, Assembly-CSharp
+        m_MethodName: Purchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2676,20 +2726,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1546350102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546350096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acaee9d15a4a8e0409f866b15a605d89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emeraldManager: {fileID: 0}
-  emeraldcost: 0
 --- !u!1 &1679698520
 GameObject:
   m_ObjectHideFlags: 0
