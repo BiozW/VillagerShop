@@ -15,9 +15,12 @@ namespace Minecraft.InventorySystem
         [SerializeField] TMP_Text countText;
         [SerializeField] Sprite itemImage;
         [SerializeField] Image pointerImage;
+        public PurchaseManager purchase;
+
 
         public void SetData(UIItem_Data data)
         {
+            purchase.emeraldcost = data.itemData.cost;
             //itemNameText.text = data.itemData.displayName;
             costText.text = "" + data.itemData.cost;
             countText.text = "" +  data.itemData.count;
@@ -27,6 +30,7 @@ namespace Minecraft.InventorySystem
             //itemImage.gameObject.SetActive(true);
             pointerImage.gameObject.SetActive(data.isSelected);
         }
+
     }
 
     //Create a DTO class that hold information of the item and also tell is the item is selected.
