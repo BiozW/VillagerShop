@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.U2D;
 using UnityEngine.EventSystems;
 
 namespace Minecraft.InventorySystem
 {
-    public class UIItem : MonoBehaviour
+    public class UIItem : MonoBehaviour , IPointerEnterHandler , IPointerExitHandler
     {
         public GameObject ItemIcon;
         //[SerializeField] TMP_Text itemNameText;
@@ -17,12 +18,15 @@ namespace Minecraft.InventorySystem
         [SerializeField] Sprite itemImage;
         [SerializeField] Image pointerImage;
         public PurchaseManager purchase;
-        public DescriptionShow descriptionShow;
+        [SerializeField] TextMeshProUGUI descriptionShow;
+
+        public string description_text;
 
 
         public void SetData(UIItem_Data data)
         {
-            descriptionShow.description = data.itemData.description;
+            descriptionShow.text = data.itemData.description;
+            description_text = data.itemData.description;
             purchase.emeraldcost = data.itemData.cost;
             //itemNameText.text = data.itemData.displayName;
             costText.text = "" + data.itemData.cost;
@@ -40,11 +44,11 @@ namespace Minecraft.InventorySystem
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            
+            descriptionShow.text = description_text;
         }
         public void OnPointerExit(PointerEventData eventData)
         {
-
+            descriptionShow.text = "";
         }
 
     }
