@@ -9,12 +9,10 @@ namespace Minecraft.InventorySystem
     public class UIInventory : MonoBehaviour
     {
         [Header("Category")]
-        //[SerializeField] Image categoryIconImage;
         [SerializeField] TMP_Text categoryText;
         
         [Header("Current Item")]
         [SerializeField] Image currentItemIconImage;
-        //[SerializeField] Text descriptionText;
 
         [Header("Item List")] 
         [SerializeField] UIItem itemUIPrefab;
@@ -22,21 +20,14 @@ namespace Minecraft.InventorySystem
 
         void Start()
         {
-            //Make sure to hide original blueprint of UIItem at the start.
             itemUIPrefab.gameObject.SetActive(false);
         }
 
         public void SetCategory(CategoryInfo info)
         {
-            //categoryIconImage.sprite = info.icon;
             categoryText.text = info.name;
         }
         
-        public void SetCurrentItemInfo(ItemData data)
-        {
-            //descriptionText.text = data.description;
-            //currentItemIconImage.sprite = data.icon;
-        }
 
         public void SetItemList(UIItem_Data[] uiDatas)
         {

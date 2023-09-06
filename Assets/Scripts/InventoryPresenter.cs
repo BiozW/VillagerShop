@@ -125,7 +125,6 @@ namespace Minecraft.InventorySystem
 
             //Current item is retrieved from itemsToDisplay using 'currentItemIndex'
             var currentItem = itemsToDisplay[currentItemIndex];
-            ui.SetCurrentItemInfo(currentItem);
 
             //This will hold list of UIItem_Data for the display of UIItem
             var uiDataList = new List<UIItem_Data>();

@@ -12,7 +12,6 @@ namespace Minecraft.InventorySystem
     public class UIItem : MonoBehaviour , IPointerEnterHandler , IPointerExitHandler
     {
         public GameObject ItemIcon;
-        //[SerializeField] TMP_Text itemNameText;
         [SerializeField] TMP_Text costText;
         [SerializeField] TMP_Text countText;
         [SerializeField] Sprite itemImage;
